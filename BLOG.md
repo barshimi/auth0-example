@@ -21,7 +21,7 @@ Next, add the NestJS Auth Module to your service. You can do this by navigating 
 Next, add the Auth0 plugin to your service. You can do this by navigating to the 'Plugins' section within your service sidebar menu, where you'll see a list of available plugins and installed plugins(see screenshot below for reference).
 
 <div>
-<img src="./images/plugins.png" alt="" style="margin-left: auto; margin-right: auto;" height="943" width="1910">
+<img src="./images/plugins.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
 </div>
 <br />
 
@@ -37,7 +37,7 @@ To provide a summary of the steps:
 
 The settings will look something like the following picture:
 <div>
-<img src="./images/settings-simple.png" alt="" style="margin-left: auto; margin-right: auto;" height="943" width="1910">
+<img src="./images/settings-simple.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
 </div>
 <br />
 
@@ -56,7 +56,7 @@ For how to get the access token and the permissions required, see the [**Plugin 
 
 After getting these you can add them to the plugin settings as shown below:
 <div>
-<img src="./images/settings-management.png" alt="" style="margin-left: auto; margin-right: auto;" height="943" width="1910">
+<img src="./images/settings-management.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
 </div>
 <br />
 
@@ -76,28 +76,31 @@ The plugin will create the following files for you as seen in this [**PR**](http
 - Adds the required dependencies to the `package.json` file.
 
 <div>
-<img src="./images/admin-package.png" alt="" style="margin-left: auto; margin-right: auto;" height="943" width="1910">
+<img src="./images/admin-package.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
 </div>
 <br />
 
 <div>
-<img src="./images/server-package.png" alt="" style="margin-left: auto; margin-right: auto;" height="943" width="1910">
+<img src="./images/server-package.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
 </div>
 <br />
 
 The `@auth0/auth0-spa-js` and `jwks-rsa` help in adding the authentication and authorization to the frontend and backend respectively. While `react-router-dom` is used to add the routes to the frontend.
 
+<hr />
+
 - Adds the required .env variables to the `.env` file used in the frontend and backend.
 
 <div>
-<img src="./images/admin-env.png" alt="" style="margin-left: auto; margin-right: auto;" height="943" width="1910">
+<img src="./images/admin-env.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
 </div>
 <br />
 
 <div>
-<img src="./images/server-env.png" alt="" style="margin-left: auto; margin-right: auto;" height="943" width="1910">
+<img src="./images/server-env.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
 </div>
 <br />
+<hr/>
 
 - Adds `ra-auth0-provider` to the `Admin`. This is used to setup Auth0 in the frontend. It provides the `authProvider` prop to the `Admin` component, and has requisite `login`, `logout` functions.
 
@@ -198,6 +201,7 @@ export const auth0AuthProvider: AuthProvider = {
   },
 };
 ```
+<hr/>
 
 - Adds the logic to get access token in graphql provider as seen in these [**lines**](https://github.com/Shurtu-gal/auth0-example/blob/2f4b7f69056ffbd8bc89871bb315babb7805cd9e/apps/auth-example-admin/src/data-provider/graphqlDataProvider.ts#L11-#L17)
 
@@ -248,6 +252,7 @@ export class JwtStrategyBase extends PassportStrategy(Strategy) {
   }
 }
 ```
+<hr/>
 
 - Adds the `JWT stratgey` code which is editable by users to the backend. This is done by adding the following code to the `src/auth/jwt/jwt.strategy.ts` file. And then validating it in the database using `validate` function.
 
