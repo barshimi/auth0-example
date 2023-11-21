@@ -319,6 +319,39 @@ export interface Auth0User {
 
 The types of the fields in this interface can be changed as per the requirements of the user and generally varies from application to application. You can find more information about the fields [here](https://auth0.com/docs/secure/tokens/json-web-tokens/create-custom-claims). However, the `email` field is required as it is used to identify the user. Also, if you want some fields you may have to change the **scope** in the `src/auth-provider/ra-auth-auth0.ts` in the frontend.
 
+## Customization - Add social connections
+
+With [Auth0](https://auth0.com/) you can add social connections to your application. This allows users to login to your application using their social media accounts. This allows you to provide a more personalized, secure and passwordless experience for your users. You can add social connections to your application by following the steps below:
+
+1. Go to the [**Auth0 Social Connections**](https://manage.auth0.com/#/connections/social/create) page. You will see various options out there as can be seen below.
+
+  <div>
+    <img src="./images/auth-social.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
+  </div>
+  <br />
+  <hr/>
+
+2. Here I am choosing GitHub however, you can choose any of the options available. The steps are nearly similar to each other.
+3. After choosing the option, you will be redirected to the configuration page for that option. Here you can configure the connection as per your requirements. You can also add custom scopes to the connection. For more information on how to do this, see the [**Marketplace documentation**](https://marketplace.auth0.com/integrations/github-social-connection). 
+
+> **Note** :- Make sure to add the `email` scope to the connection as shown in the image. This is required to get the email of the user.
+
+  <div>
+    <img src="./images/auth-github.png" alt="" style="margin-left: auto; margin-right: auto; width: 100%; aspect-ratio: auto;">
+  </div>
+  <br />
+  <hr/>
+
+4. Click the `Create` button to create the connection. This will redirect you to the **Connection setup** page where you can configure on which apps you should add this. 
+
+5. Now, the connections should be visible in the login page of your application. You can see the login page of the example application below.
+
+  <div style="display: flex; flex-direction: row; justify-content: center;">
+    <img src="./images/login.png" alt="" style="margin-left: auto; margin-right: auto; aspect-ratio: auto; max-height: 500px">
+  </div>
+  <br />
+  <hr/>
+
 ## Future Work
 
 Make the plugin more customizable by adding more options to the plugin settings. This will allow the user to customize the plugin as per their requirements. Some of the options that can be added are:
@@ -326,7 +359,6 @@ Make the plugin more customizable by adding more options to the plugin settings.
 - Authentication using phone number
 - Passwordless authentication
 - Two factor authentication
-- Authentication using social media accounts
 - Adding custom roles
 
 If you have any other suggestions, please feel free create an issue at the [**Auth0 plugin repo**](https://github.com/amplication/plugins/issues/new)
@@ -336,5 +368,3 @@ If you have any other suggestions, please feel free create an issue at the [**Au
 [Amplication's Auth0 Plugin](https://github.com/amplication/plugins/blob/master/plugins/auth-auth0) provides a powerful but effortless way to add authentication to your application. It is easy to use and can be configured in a few minutes thus reducing complexity overhead.
 
 **I hope this blog post was helpful to you. If you have any questions or suggestions, please feel free to reach out to me on [Twitter](https://twitter.com/Shurtu_Gal), [GitHub](https://github.com/Shurtu-gal/) or [LinkedIn](https://www.linkedin.com/in/ashish-padhy3023/). I would love to hear from you.**
-
-
