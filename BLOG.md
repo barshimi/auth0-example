@@ -50,7 +50,7 @@ Then click the `Save` button to save the settings and commit the changes.
 
 ### Alternative: Automate setup of Auth0 account
 
-If you hate having to setup everything manually, or just don't have access to the auth0 account, then you don't have to worry as I have go you covered. Introducing [Auth0 Management API](https://auth0.com/docs/api/management/v2). Using this all the nifty work will be done for you. All you have to do is provide is a access token with necessary permisssions. You can also customise the names 🤖🚀.
+If you hate having to setup everything manually, or just don't have access to the auth0 account, then you don't have to worry as I have got you covered. Introducing [Auth0 Management API](https://auth0.com/docs/api/management/v2). Using this all the nifty work will be done for you. All you have to do is provide is an access token with necessary permisssions. You can also customise the names 🤖🚀.
 
 For how to get the access token and the permissions required, see the [**Plugin Docs**](https://github.com/amplication/plugins/blob/master/plugins/auth-auth0/README.md#using-management-api)
 
